@@ -6,6 +6,14 @@
  * Add a function that will be called when the window is loaded.
  */
   window.addEventListener("load", init);
+  // Static variables for names and ticket counts
+  const namesAndTickets = [
+    { name: 'Mary', tickets: 500 },
+    { name: 'John', tickets: 100 },
+    { name: 'Kira', tickets: 80 },
+    { name: 'Olive', tickets: 50 },
+    { name: 'Bob', tickets: 77 }
+  ];
 
   /**
  * CHANGE: Describe what your init function does here.
@@ -13,6 +21,7 @@
   function init() {
     console.log("hello");
     // THIS IS THE CODE THAT WILL BE EXECUTED ONCE THE WEBPAGE LOADS
+    id("select-name").addEventListener("click", selectRandomName);
   }
 
   /**
@@ -20,9 +29,29 @@
  * every function detailing what it's purpose is
  * Use JSDoc format with @param and @return.
  */
-  function exampleFunction1() {
-    /* SOME CODE */
+
+// Function to select a random name and display it
+function selectRandomName() {
+  const totalTickets = namesAndTickets.reduce((acc, { tickets }) => acc + tickets, 0);
+
+  if (totalTickets === 0) {
+      alert('No tickets to select from.');
+      return;
   }
+
+  let randomNumber = Math.floor(Math.random() * totalTickets) + 1;
+  let selectedName = '';
+
+  for (const { name, tickets } of namesAndTickets) {
+      randomNumber -= tickets;
+      if (randomNumber <= 0) {
+          selectedName = name;
+          break;
+      }
+  }
+
+  document.getElementById('result').innerText = selectedName;
+}
 
   /**
  * Make sure to always add a descriptive comment above
