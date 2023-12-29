@@ -3,3 +3,4 @@ This selects a random Husky Robotics member from the names entered into the Pie 
 ## Husky Robotics Pie Fundraiser 2023
 Fundraiser details and stats:
 ## Getting Started
+url: https://mv103.github.io/husky-robotics/
