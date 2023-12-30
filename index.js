@@ -7,21 +7,26 @@
  */
   window.addEventListener("load", init);
   // Static variables for names and ticket counts
-  const namesAndTickets = [
+  const leadNamesTickets = [
     { name: 'Amelia', tickets: 83 },
     { name: 'Davis', tickets: 30 },
     { name: 'Casey', tickets: 25 },
     { name: 'Eli Reeb', tickets: 32 },
     { name: 'Ahbay', tickets: 22 },
-    { name: 'Eddie', tickets: 10 },
     { name: 'Lucas', tickets: 558 },
-    { name: 'Ken Pham', tickets: 12 },
-    { name: 'Quinn Pfiefer', tickets: 2 },
     { name: 'Oliver Huang', tickets: 5 },
-    { name: 'Prithvi', tickets: 5 },
     { name: 'Linda', tickets: 10 }
   ];
-  const temp = [...namesAndTickets];
+  const temp1 = [...leadNamesTickets];
+
+  const genNamesTickets = [
+    { name: 'Eddie', tickets: 10 },
+    { name: 'Ken Pham', tickets: 12 },
+    { name: 'Quinn Pfiefer', tickets: 2 },
+    { name: 'Prithvi', tickets: 5 }
+  ];
+  const temp2 = [...genNamesTickets];
+
   let slots = 5;
 
   /**
@@ -42,40 +47,76 @@
 
 // Function to select a random name and display it
 function selectRandomName() {
-  const totalTickets = temp.reduce((acc, { tickets }) => acc + tickets, 0);
+  if (slots > 2) {
+    const totalTickets = temp1.reduce((acc, { tickets }) => acc + tickets, 0);
 
-  if (totalTickets === 0) {
-      alert('No tickets to select from.');
-      return;
+    if (totalTickets === 0) {
+        alert('No tickets to select from.');
+        return;
+    }
+
+    let randomNumber = Math.floor(Math.random() * totalTickets) + 1;
+    let selectedName = '';
+
+    for (const { name, tickets } of temp1) {
+        randomNumber -= tickets;
+        if (randomNumber <= 0) {
+            selectedName = name;
+            break;
+        }
+    }
+
+    document.getElementById('result').innerText = selectedName;
+    populateSlot(selectedName);
+    removeName(selectedName);
+  } else {
+    const totalTickets = temp2.reduce((acc, { tickets }) => acc + tickets, 0);
+
+    if (totalTickets === 0) {
+        alert('No tickets to select from.');
+        return;
+    }
+
+    let randomNumber = Math.floor(Math.random() * totalTickets) + 1;
+    let selectedName = '';
+
+    for (const { name, tickets } of temp2) {
+        randomNumber -= tickets;
+        if (randomNumber <= 0) {
+            selectedName = name;
+            break;
+        }
+    }
+
+    document.getElementById('result').innerText = selectedName;
+    populateSlot(selectedName);
+    removeName(selectedName);
   }
-
-  let randomNumber = Math.floor(Math.random() * totalTickets) + 1;
-  let selectedName = '';
-
-  for (const { name, tickets } of temp) {
-      randomNumber -= tickets;
-      if (randomNumber <= 0) {
-          selectedName = name;
-          break;
-      }
-  }
-
-  document.getElementById('result').innerText = selectedName;
-  populateSlot(selectedName);
-  removeName(selectedName);
 }
 
 function populateNominees() {
   let leadbucket = id("leads");
-  for (let i = 0; i < namesAndTickets.length; i++) {
+  for (let i = 0; i < leadNamesTickets.length; i++) {
     let nomineeInfo = gen("p");
-    let nominee = namesAndTickets[i].name;
-    let ticket = namesAndTickets[i].tickets;
+    let nominee = leadNamesTickets[i].name;
+    let ticket = leadNamesTickets[i].tickets;
 
-    nomineeInfo.id = namesAndTickets[i].name;
-    nomineeInfo.innerText = namesAndTickets[i].name + " with " + ticket + " tickets.";
+    nomineeInfo.id = leadNamesTickets[i].name;
+    nomineeInfo.innerText = nominee + " with " + ticket + " tickets.";
 
     leadbucket.appendChild(nomineeInfo);
+  }
+
+  let genbucket = id("general");
+  for (let i = 0; i < genNamesTickets.length; i++) {
+    let nomineeInfo = gen("p");
+    let nominee = genNamesTickets[i].name;
+    let ticket = genNamesTickets[i].tickets;
+
+    nomineeInfo.id = genNamesTickets[i].name;
+    nomineeInfo.innerText = nominee + " with " + ticket + " tickets.";
+
+    genbucket.appendChild(nomineeInfo);
   }
 }
 
@@ -91,14 +132,21 @@ function populateSlot(selectedName) {
 
 function removeName(selectedName) {
   // Find the index of the selected name in the temporary array
-  const indexToRemove = temp.findIndex(item => item.name === selectedName);
+  if (slots > 2) {
+    const indexToRemove = temp1.findIndex(item => item.name === selectedName);
 
-  if (indexToRemove !== -1) {
-    // Remove the selected name from the temporary array
-    temp.splice(indexToRemove, 1);
+    if (indexToRemove !== -1) {
+      // Remove the selected name from the temporary array
+      temp1.splice(indexToRemove, 1);
+    }
+  } else {
+    const indexToRemove = temp2.findIndex(item => item.name === selectedName);
+
+    if (indexToRemove !== -1) {
+      // Remove the selected name from the temporary array
+      temp2.splice(indexToRemove, 1);
+    }
   }
-
-  console.log(temp);
 }
 
   /**
