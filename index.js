@@ -66,7 +66,7 @@ function selectRandomName() {
         }
     }
 
-    document.getElementById('result').innerText = selectedName;
+    id('result').innerText = selectedName;
     populateSlot(selectedName);
     removeName(selectedName);
   } else {
@@ -88,7 +88,7 @@ function selectRandomName() {
         }
     }
 
-    document.getElementById('result').innerText = selectedName;
+    id('result').innerText = selectedName;
     populateSlot(selectedName);
     removeName(selectedName);
   }
@@ -102,7 +102,7 @@ function populateNominees() {
     let ticket = leadNamesTickets[i].tickets;
 
     nomineeInfo.id = leadNamesTickets[i].name;
-    nomineeInfo.innerText = nominee + " with " + ticket + " tickets.";
+    nomineeInfo.innerText = nominee + " with " + ticket + " entries.";
 
     leadbucket.appendChild(nomineeInfo);
   }
@@ -114,7 +114,7 @@ function populateNominees() {
     let ticket = genNamesTickets[i].tickets;
 
     nomineeInfo.id = genNamesTickets[i].name;
-    nomineeInfo.innerText = nominee + " with " + ticket + " tickets.";
+    nomineeInfo.innerText = nominee + " with " + ticket + " entries.";
 
     genbucket.appendChild(nomineeInfo);
   }

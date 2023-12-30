@@ -1,6 +1,75 @@
-#leads p {
-
+h1 {
+  text-align: center;
+  font-size: 30pt;
+  font-family: 'Encode Sans', sans-serif;
 }
-#general p {
 
+p {
+  margin: 10px;
+  font-size: 12pt;
+  font-family: 'Open Sans', sans-serif;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25vh;
+  margin: 5vh;
+  margin-left: 10vh;
+  margin-right: 10vh;
+}
+.containerChild {
+  width: 100%;
+  padding-bottom: 5vh;
+  background-color: #AAD8D7;
+}
+
+h2 {
+  font-size: 20pt;
+}
+
+.containerChild h2, h3, p {
+  padding-left: 10vh;
+  padding-right: 10vh;
+}
+
+.containerChild h2, h3 {
+  font-family: 'Encode Sans', sans-serif;
+}
+
+#containerChild2, #containerChild1 h2 {
+  text-align: center;
+}
+
+#selected-names p {
+  margin: 16px;
+}
+
+#resContainer {
+  padding: 5vh;
+}
+
+button {
+  border: 3pt black solid;
+  border-radius: 15px;
+  padding: 14px 28px;
+  font-size: 20pt;
+  font-family: 'Encode Sans', sans-serif;
+}
+
+button:hover {
+  border-color: #BF8308;
+  color: #BF8308;
+}
+
+
+#graphic {
+  height:100px;
+  left: 62vh; /* play around with this */
+  position:absolute;
+  top: 20vh; /* and play around with this */
+}
+img {
+  width: 100%;
+}
+
