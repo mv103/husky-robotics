@@ -88,19 +88,21 @@ img {
     font-size: 9pt;
   }
   .container {
+    grid-template-columns: 1fr;
     grid-gap: 2vh;
     margin: 5vh;
+    margin-top: 2vh;
   }
   .containerChild {
     width: 100%;
-    padding-bottom: 5vh;
+    padding-bottom: 2vh;
   }
   .containerChild h2, h3, p {
     padding-left: 3vh;
     padding-right: 3vh;
   }
   #resContainer {
-    padding: 3vh;
+    padding: 2vh;
   }
   button {
     border-width: 2pt;
@@ -109,11 +111,11 @@ img {
   }
   #graphic {
     height:100px;
-    left: 30vh; /* play around with this */
+    left: 25vh; /* play around with this */
     position:absolute;
-    top: 25vh; /* and play around with this */
+    top: 15vh; /* and play around with this */
   }
   img {
-    width: 30%;
+    width: 60%;
   }
 }
