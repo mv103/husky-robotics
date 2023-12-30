@@ -78,10 +78,10 @@ img {
     /* padding-top: 10vh; */
   }
   h1 {
-    font-size: 20pt;
+    font-size: 30pt;
   }
   h2 {
-    font-size: 15pt;
+    font-size: 20pt;
   }
   p {
     margin: 0;
@@ -90,7 +90,7 @@ img {
   .container {
     grid-template-columns: 1fr;
     grid-gap: 2vh;
-    margin: 5vh;
+    margin: 1vh;
     margin-top: 2vh;
   }
   .containerChild {
@@ -106,8 +106,8 @@ img {
   }
   button {
     border-width: 2pt;
-    padding: 7px 14px;
-    font-size: 15pt;
+    padding: 14px 28px;
+    font-size: 20pt;
   }
   #graphic {
     height:100px;
