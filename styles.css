@@ -4,6 +4,10 @@ h1 {
   font-family: 'Encode Sans', sans-serif;
 }
 
+h2 {
+  font-size: 20pt;
+}
+
 p {
   margin: 10px;
   font-size: 12pt;
@@ -22,10 +26,6 @@ p {
   width: 100%;
   padding-bottom: 5vh;
   background-color: #AAD8D7;
-}
-
-h2 {
-  font-size: 20pt;
 }
 
 .containerChild h2, h3, p {
@@ -62,7 +62,6 @@ button:hover {
   color: #BF8308;
 }
 
-
 #graphic {
   height:100px;
   left: 62vh; /* play around with this */
@@ -73,3 +72,48 @@ img {
   width: 80%;
 }
 
+@media only screen and (orientation: portrait) {
+  html {
+    scroll-padding-top: var(--scroll-padding, 100px);
+    /* padding-top: 10vh; */
+  }
+  h1 {
+    font-size: 20pt;
+  }
+  h2 {
+    font-size: 15pt;
+  }
+  p {
+    margin: 0;
+    font-size: 9pt;
+  }
+  .container {
+    grid-gap: 2vh;
+    margin: 5vh;
+  }
+  .containerChild {
+    width: 100%;
+    padding-bottom: 5vh;
+  }
+  .containerChild h2, h3, p {
+    padding-left: 3vh;
+    padding-right: 3vh;
+  }
+  #resContainer {
+    padding: 3vh;
+  }
+  button {
+    border-width: 2pt;
+    padding: 7px 14px;
+    font-size: 15pt;
+  }
+  #graphic {
+    height:100px;
+    left: 30vh; /* play around with this */
+    position:absolute;
+    top: 25vh; /* and play around with this */
+  }
+  img {
+    width: 30%;
+  }
+}
