@@ -8,12 +8,21 @@
   window.addEventListener("load", init);
   // Static variables for names and ticket counts
   const namesAndTickets = [
-    { name: 'Mary', tickets: 500 },
-    { name: 'John', tickets: 100 },
-    { name: 'Kira', tickets: 80 },
-    { name: 'Olive', tickets: 50 },
-    { name: 'Bob', tickets: 77 }
+    { name: 'Amelia', tickets: 83 },
+    { name: 'Davis', tickets: 30 },
+    { name: 'Casey', tickets: 25 },
+    { name: 'Eli Reeb', tickets: 32 },
+    { name: 'Ahbay', tickets: 22 },
+    { name: 'Eddie', tickets: 10 },
+    { name: 'Lucas', tickets: 558 },
+    { name: 'Ken Pham', tickets: 12 },
+    { name: 'Quinn Pfiefer', tickets: 2 },
+    { name: 'Oliver Huang', tickets: 5 },
+    { name: 'Prithvi', tickets: 5 },
+    { name: 'Linda', tickets: 10 }
   ];
+  const temp = [...namesAndTickets];
+  let slots = 5;
 
   /**
  * CHANGE: Describe what your init function does here.
@@ -22,6 +31,7 @@
     console.log("hello");
     // THIS IS THE CODE THAT WILL BE EXECUTED ONCE THE WEBPAGE LOADS
     id("select-name").addEventListener("click", selectRandomName);
+    populateNominees();
   }
 
   /**
@@ -32,7 +42,7 @@
 
 // Function to select a random name and display it
 function selectRandomName() {
-  const totalTickets = namesAndTickets.reduce((acc, { tickets }) => acc + tickets, 0);
+  const totalTickets = temp.reduce((acc, { tickets }) => acc + tickets, 0);
 
   if (totalTickets === 0) {
       alert('No tickets to select from.');
@@ -42,7 +52,7 @@ function selectRandomName() {
   let randomNumber = Math.floor(Math.random() * totalTickets) + 1;
   let selectedName = '';
 
-  for (const { name, tickets } of namesAndTickets) {
+  for (const { name, tickets } of temp) {
       randomNumber -= tickets;
       if (randomNumber <= 0) {
           selectedName = name;
@@ -51,6 +61,44 @@ function selectRandomName() {
   }
 
   document.getElementById('result').innerText = selectedName;
+  populateSlot(selectedName);
+  removeName(selectedName);
+}
+
+function populateNominees() {
+  let leadbucket = id("leads");
+  for (let i = 0; i < namesAndTickets.length; i++) {
+    let nomineeInfo = gen("p");
+    let nominee = namesAndTickets[i].name;
+    let ticket = namesAndTickets[i].tickets;
+
+    nomineeInfo.id = namesAndTickets[i].name;
+    nomineeInfo.innerText = namesAndTickets[i].name + " with " + ticket + " tickets.";
+
+    leadbucket.appendChild(nomineeInfo);
+  }
+}
+
+function populateSlot(selectedName) {
+  if (slots == 0) {
+    alert("5 names have been chosen! Refresh page to start again.");
+    return;
+  }
+  let currSlotID = "n" + slots;
+  id(currSlotID).innerText = selectedName;
+  slots--;
+}
+
+function removeName(selectedName) {
+  // Find the index of the selected name in the temporary array
+  const indexToRemove = temp.findIndex(item => item.name === selectedName);
+
+  if (indexToRemove !== -1) {
+    // Remove the selected name from the temporary array
+    temp.splice(indexToRemove, 1);
+  }
+
+  console.log(temp);
 }
 
   /**
