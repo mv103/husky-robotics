@@ -36,6 +36,7 @@
     console.log("hello");
     // THIS IS THE CODE THAT WILL BE EXECUTED ONCE THE WEBPAGE LOADS
     id("select-name").addEventListener("click", selectRandomName);
+    id("stats").addEventListener("click", stopAnimation);
     populateNominees();
   }
 
@@ -155,9 +156,8 @@ function removeName(selectedName) {
  * @param {variabletype} someVariable This is a description of someVariable, including, perhaps, preconditions.
  * @returns {returntype} A description of what this function is actually returning
  */
-  function exampleFunction2(someVariable) {
-    /* SOME CODE */
-    return something;
+  function stopAnimation() {
+    id("stats").style.animation = 'none';
   }
 
   /** ------------------------------ Helper Functions  ------------------------------ */
