@@ -105,6 +105,10 @@ img {
     margin: 0;
     font-size: 14pt;
   }
+  #stats {
+    font-weight: normal;
+    font-size: 15pt;
+  }
   .container {
     grid-template-columns: 1fr;
     grid-gap: 2vh;
@@ -131,7 +135,7 @@ img {
     height:100px;
     left: 25vh; /* play around with this */
     position:absolute;
-    top: 15vh; /* and play around with this */
+    top: 20vh; /* and play around with this */
   }
   img {
     width: 60%;
