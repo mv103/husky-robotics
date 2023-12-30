@@ -78,14 +78,14 @@ img {
     /* padding-top: 10vh; */
   }
   h1 {
-    font-size: 30pt;
+    font-size: 36pt;
   }
   h2 {
-    font-size: 20pt;
+    font-size: 24pt;
   }
   p {
     margin: 0;
-    font-size: 9pt;
+    font-size: 14pt;
   }
   .container {
     grid-template-columns: 1fr;
@@ -107,7 +107,7 @@ img {
   button {
     border-width: 2pt;
     padding: 14px 28px;
-    font-size: 20pt;
+    font-size: 24pt;
   }
   #graphic {
     height:100px;
