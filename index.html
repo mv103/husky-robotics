@@ -9,29 +9,32 @@
 </head>
 <body>
   <h1>Husky Robotics Pie Fundraiser Name Selector</h1>
-  <h2>Lead Nominees</h3>
-  <div class="name-bucket" id="leads">
-    <!--This will populate with names of nominated leads-->
-  </div>
-  <h2>General Member Nominees</h3>
-  <div class="name-bucket" id="general">
-    <!--This will populate with names of nominated general members-->
+  <div class="container">
+    <h2>Nominations</h2>
+    <h3>Leads</h3>
+    <div class="name-bucket" id="leads">
+      <!--This will populate with names of nominated leads-->
+    </div>
+    <h3>General Members</h3>
+    <div class="name-bucket" id="general">
+      <!--This will populate with names of nominated general members-->
+    </div>
   </div>
 
-  <h2>Who Will Meet Their Fate</h2>
-  <div id="selected-names">
-    <!-- names selected will create a div and display here-->
-      <p id="n5">1st Lead</p>
-      <p id="n4">2nd Lead</p>
-      <p id="n3">3rd Lead</p>
-      <p id="n2">4th Member</p>
-      <p id="n1">5th Member</p>
+  <div class="container">
+    <h2>Who Will Meet Their Fate?</h2>
+    <div id="selected-names">
+      <!-- names selected will create a div and display here-->
+        <p id="n5">1st Lead</p>
+        <p id="n4">2nd Lead</p>
+        <p id="n3">3rd Lead</p>
+        <p id="n2">4th Member</p>
+        <p id="n1">5th Member</p>
+    </div>
+    <div>
+      <h2 id="result"></h2>
+    </div>
+    <button id="select-name">Select Name</button>
   </div>
-  <div>
-    <h2 id="result"></h2>
-  </div>
-  <button id="select-name">Select Random Name</button>
-
-
 </body>
 </html>
