@@ -6,10 +6,10 @@
  * Add a function that will be called when the window is loaded.
  */
   window.addEventListener("load", init);
-  // Static variables for names and ticket counts
+  // Static variables for names and ticket counts for leads
   const leadNamesTickets = [
     { name: 'Amelia', tickets: 88 },
-    { name: 'Davis', tickets: 80 },
+    { name: 'Davis', tickets: 130 },
     { name: 'Casey', tickets: 25 },
     { name: 'Eli Reeb', tickets: 37 },
     { name: 'Ahbay', tickets: 52 },
@@ -19,6 +19,7 @@
   ];
   const temp1 = [...leadNamesTickets];
 
+  // Static variables for names and ticket counts for nonleads
   const genNamesTickets = [
     { name: 'Eddie', tickets: 10 },
     { name: 'Ken Pham', tickets: 12 },
