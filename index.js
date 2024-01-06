@@ -47,6 +47,7 @@
  */
 
 // Function to select a random name and display it
+// differetiates slots for lead and nonlead members
 function selectRandomName() {
   if (slots > 2) {
     const totalTickets = temp1.reduce((acc, { tickets }) => acc + tickets, 0);
@@ -95,6 +96,7 @@ function selectRandomName() {
   }
 }
 
+// loads and displays the name and number of entries of all nominees to the page
 function populateNominees() {
   let leadbucket = id("leads");
   for (let i = 0; i < leadNamesTickets.length; i++) {
@@ -121,6 +123,7 @@ function populateNominees() {
   }
 }
 
+// fills the slot with selected name and subtracts count
 function populateSlot(selectedName) {
   if (slots == 0) {
     alert("5 names have been chosen! Refresh page to start again.");
@@ -131,6 +134,7 @@ function populateSlot(selectedName) {
   slots--;
 }
 
+// removes the name of selected nominee from possible choices after they have been chosen and displayed
 function removeName(selectedName) {
   // Find the index of the selected name in the temporary array
   if (slots > 2) {
@@ -150,12 +154,7 @@ function removeName(selectedName) {
   }
 }
 
-  /**
- * Make sure to always add a descriptive comment above
- * every function detailing what it's purpose is
- * @param {variabletype} someVariable This is a description of someVariable, including, perhaps, preconditions.
- * @returns {returntype} A description of what this function is actually returning
- */
+ // stops the blinking animation of the overall statistics
   function stopAnimation() {
     id("stats").style.animation = 'none';
   }
