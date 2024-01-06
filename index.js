@@ -23,10 +23,11 @@
 
   // Static variables for names and ticket counts for nonleads
   const genNamesTickets = [
-    { name: 'Eddie', tickets: 10 },
+    { name: 'Eddie', tickets: 50 },
     { name: 'Ken Pham', tickets: 22 },
     { name: 'Quinn Pfiefer', tickets: 2 },
-    { name: 'Prithvi', tickets: 5 }
+    { name: 'Prithvi', tickets: 5 },
+    { name: 'Joe', tickets: 60}
   ];
   const temp2 = [...genNamesTickets];
 
