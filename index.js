@@ -12,7 +12,7 @@
     { name: 'Davis', tickets: 80 },
     { name: 'Casey', tickets: 25 },
     { name: 'Eli Reeb', tickets: 37 },
-    { name: 'Ahbay', tickets: 22 },
+    { name: 'Ahbay', tickets: 52 },
     { name: 'Lucas', tickets: 658 },
     { name: 'Oliver Huang', tickets: 5 },
     { name: 'Linda', tickets: 10 }
