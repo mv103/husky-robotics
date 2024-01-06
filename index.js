@@ -8,12 +8,12 @@
   window.addEventListener("load", init);
   // Static variables for names and ticket counts
   const leadNamesTickets = [
-    { name: 'Amelia', tickets: 83 },
-    { name: 'Davis', tickets: 30 },
+    { name: 'Amelia', tickets: 88 },
+    { name: 'Davis', tickets: 80 },
     { name: 'Casey', tickets: 25 },
-    { name: 'Eli Reeb', tickets: 32 },
+    { name: 'Eli Reeb', tickets: 37 },
     { name: 'Ahbay', tickets: 22 },
-    { name: 'Lucas', tickets: 558 },
+    { name: 'Lucas', tickets: 658 },
     { name: 'Oliver Huang', tickets: 5 },
     { name: 'Linda', tickets: 10 }
   ];
