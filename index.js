@@ -21,7 +21,7 @@
   ];
   const temp1 = [...leadNamesTickets];
 
-  // Static variables for names and ticket counts for nonleads
+  // Static variables for names and ticket counts for nonleads mems
   const genNamesTickets = [
     { name: 'Eddie', tickets: 50 },
     { name: 'Ken Pham', tickets: 22 },
