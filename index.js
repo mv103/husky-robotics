@@ -9,7 +9,7 @@
   // Static variables for names and ticket counts for leads
   const leadNamesTickets = [
     { name: 'Amelia', tickets: 88 },
-    { name: 'Davis', tickets: 130 },
+    { name: 'Davis', tickets: 165 },
     { name: 'Casey', tickets: 25 },
     { name: 'Eli Reeb', tickets: 42 },
     { name: 'Ahbay', tickets: 77 },
@@ -24,7 +24,7 @@
   // Static variables for names and ticket counts for nonleads
   const genNamesTickets = [
     { name: 'Eddie', tickets: 10 },
-    { name: 'Ken Pham', tickets: 12 },
+    { name: 'Ken Pham', tickets: 22 },
     { name: 'Quinn Pfiefer', tickets: 2 },
     { name: 'Prithvi', tickets: 5 }
   ];
