@@ -12,11 +12,11 @@
     { name: 'Davis', tickets: 165 },
     { name: 'Casey', tickets: 25 },
     { name: 'Eli Reeb', tickets: 42 },
-    { name: 'Ahbay', tickets: 77 },
+    { name: 'Abhay', tickets: 77 },
     { name: 'Lucas', tickets: 658 },
     { name: 'Oliver Huang', tickets: 5 },
     { name: 'Linda', tickets: 10 },
-    { name: 'Lucia', tickets: 5 },
+    { name: 'Lucia', tickets: 10 },
     { name: 'Alli', tickets: 5 }
   ];
   const temp1 = [...leadNamesTickets];
