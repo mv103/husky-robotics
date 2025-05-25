@@ -11,7 +11,7 @@
     { name: 'Lucas Bucci', tickets: 325 },
     { name: 'Tom Lewis', tickets: 26 },
     { name: 'Prithvi', tickets: 40 },
-    { name: 'CJ', tickets: 86 },
+    { name: 'CJ', tickets: 136 },
     { name: 'Amelia Zolzer', tickets: 40 },
     { name: 'Matthew Grimes', tickets: 10 },
     { name: 'Alli Tang', tickets: 10 },
@@ -21,9 +21,11 @@
 
   // Static variables for names and ticket counts for nonleads mems
   const genNamesTickets = [
-    { name: 'Ken Pham', tickets: 11 },
+    { name: 'Ken Pham', tickets: 31 },
     { name: 'Ryan Lee', tickets: 32 },
-    { name: 'Andy', tickets: 21 }
+    { name: 'Andy', tickets: 21 },
+    { name: 'Diego Garcia', tickets: 1 },
+    { name: 'Thomas Wang', tickets: 1 }
   ];
   const temp2 = [...genNamesTickets];
 
