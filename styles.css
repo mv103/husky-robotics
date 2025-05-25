@@ -22,10 +22,11 @@ p {
     opacity: 0.75;
   }
 }
-#stats {
+.stats {
   text-transform: uppercase;
   color: rgb(175, 0, 0);
-  animation: blink 4s linear infinite;
+  text-align: center;
+  /* animation: blink 4s linear infinite; */
 }
 
 span {
@@ -84,7 +85,7 @@ button:hover {
   height:100px;
   left: 62vh; /* play around with this */
   position:absolute;
-  top: 20vh; /* and play around with this */
+  top: 25vh; /* and play around with this */
 }
 img {
   width: 80%;

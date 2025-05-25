@@ -8,26 +8,22 @@
   window.addEventListener("load", init);
   // Static variables for names and ticket counts for leads
   const leadNamesTickets = [
-    { name: 'Amelia', tickets: 88 },
-    { name: 'Davis', tickets: 165 },
-    { name: 'Casey', tickets: 25 },
-    { name: 'Eli Reeb', tickets: 47 },
-    { name: 'Abhay', tickets: 77 },
-    { name: 'Lucas', tickets: 658 },
-    { name: 'Oliver Huang', tickets: 5 },
-    { name: 'Linda', tickets: 10 },
-    { name: 'Lucia', tickets: 10 },
-    { name: 'Alli', tickets: 5 }
+    { name: 'Lucas Bucci', tickets: 325 },
+    { name: 'Tom Lewis', tickets: 26 },
+    { name: 'Prithvi', tickets: 40 },
+    { name: 'CJ', tickets: 86 },
+    { name: 'Amelia Zolzer', tickets: 40 },
+    { name: 'Matthew Grimes', tickets: 10 },
+    { name: 'Alli Tang', tickets: 10 },
+    { name: 'Michael Tsien', tickets: 20 },
   ];
   const temp1 = [...leadNamesTickets];
 
   // Static variables for names and ticket counts for nonleads mems
   const genNamesTickets = [
-    { name: 'Eddie', tickets: 50 },
-    { name: 'Ken Pham', tickets: 22 },
-    { name: 'Quinn Pfiefer', tickets: 2 },
-    { name: 'Prithvi', tickets: 5 },
-    { name: 'Joe', tickets: 60}
+    { name: 'Ken Pham', tickets: 11 },
+    { name: 'Ryan Lee', tickets: 32 },
+    { name: 'Andy', tickets: 21 }
   ];
   const temp2 = [...genNamesTickets];
 
@@ -40,7 +36,7 @@
     console.log("hello");
     // THIS IS THE CODE THAT WILL BE EXECUTED ONCE THE WEBPAGE LOADS
     id("select-name").addEventListener("click", selectRandomName);
-    id("stats").addEventListener("click", stopAnimation);
+    // id("stats").addEventListener("click", stopAnimation);
     populateNominees();
   }
 
